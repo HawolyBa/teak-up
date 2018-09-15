@@ -2,7 +2,8 @@
   color: $white
   background-color: $black
   .inner-about
-    height: 300px
+    min-height: 300px
+    padding: 30px 0
   .about-text
     width: 70%
     h3 
@@ -11,3 +12,11 @@
       margin-bottom: 20px
     .button-group
       margin-top: 40px
+
+@media (max-width: 768px)
+  .about 
+    .inner-about
+      padding: 30px
+      flex-flow: column
+    .about-text
+      width: 100%

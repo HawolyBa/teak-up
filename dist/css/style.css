@@ -1,6 +1,8 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 a, a:hover {
   text-decoration: none; }
@@ -16,6 +18,10 @@ body {
   max-width: 900px;
   margin: auto;
   position: relative; }
+
+@media (max-width: 768px) {
+  .inner {
+    width: 100%; } }
 
 .rw-flex-spb {
   display: -webkit-box;
@@ -74,7 +80,7 @@ a.btn {
 
 .side-ellipse {
   width: 20%;
-  height: 100%;
+  height: 200px;
   background-image: url(../images/ellipse.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -89,6 +95,12 @@ a.btn {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     font-family: 'Kaushan Script', cursive; }
+
+@media (max-width: 768px) {
+  .side-ellipse {
+    width: 100%;
+    height: 200px;
+    z-index: 3; } }
 
 header {
   background-color: rgba(0, 0, 0, 0.9);
@@ -128,11 +140,18 @@ header {
   -webkit-filter: blur(0);
           filter: blur(0); }
 
+.hero:hover .hero-content {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+
 .about {
   color: #f4f4f4;
   background-color: rgba(0, 0, 0, 0.9); }
   .about .inner-about {
-    height: 300px; }
+    min-height: 300px;
+    padding: 30px 0; }
   .about .about-text {
     width: 70%; }
     .about .about-text h3 {
@@ -141,6 +160,16 @@ header {
       margin-bottom: 20px; }
     .about .about-text .button-group {
       margin-top: 40px; }
+
+@media (max-width: 768px) {
+  .about .inner-about {
+    padding: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column; }
+  .about .about-text {
+    width: 100%; } }
 
 .menu {
   background: #f4f4f4;
@@ -191,6 +220,29 @@ header {
             margin-right: 0;
             margin-left: 10px; }
 
+@media (max-width: 768px) {
+  .menu {
+    padding: 30px; }
+    .menu .inner-menu {
+      height: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column; }
+      .menu .inner-menu .menu-grid {
+        top: 0;
+        width: 100%;
+        min-height: 250px; }
+        .menu .inner-menu .menu-grid .menu-item {
+          height: auto;
+          margin-bottom: 20px; } }
+
+@media (max-width: 369px) {
+  .menu {
+    padding: 15px; }
+    .menu .inner-menu .menu-grid .menu-item {
+      width: 100%; } }
+
 .testimonies {
   height: 350px;
   background-image: url(../images/petr-sevcovic-470566-unsplash.png);
@@ -226,7 +278,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
   color: #f4f4f4; }
   footer .inner {
-    padding: 40px 0; }
+    padding: 40px 20px; }
   footer .inner-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -272,3 +324,24 @@ footer {
     height: 32px;
     width: auto;
     margin-left: 15px; }
+
+@media (max-width: 768px) {
+  footer .inner-footer {
+    padding: 30px; }
+  footer .column {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px; }
+  footer .newsletter input {
+    width: 85%; }
+  footer .newsletter a.btn {
+    width: 15%; }
+  footer .quote {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #232323; } }
+
+@media (max-width: 369px) {
+  footer .newsletter input {
+    width: 75%; }
+  footer .newsletter a.btn {
+    width: 25%; } }

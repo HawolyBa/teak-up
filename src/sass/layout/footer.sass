@@ -3,7 +3,7 @@ footer
   background-color: $black
   color: $white
   .inner
-    padding: 40px 0
+    padding: 40px 20px
   .inner-footer 
     display: flex
     flex-flow: row wrap 
@@ -38,5 +38,31 @@ footer
       height: 32px
       width: auto
       margin-left: 15px
+  
+@media (max-width: 768px)
+  footer
+    .inner-footer 
+      padding: 30px
+    .column 
+      text-align: center
+      width: 100%
+      margin-bottom: 20px
+      
+    .newsletter 
+      input
+        width: 85%
+      a.btn 
+        width: 15%
+    .quote
+      padding-bottom: 20px
+      border-bottom: 1px solid #232323
+@media (max-width: 369px)
+  footer 
+    .newsletter 
+      input
+        width: 75%
+      a.btn
+        width: 25%
+
 
   
