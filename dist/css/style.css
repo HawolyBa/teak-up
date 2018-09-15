@@ -161,9 +161,10 @@ header {
           max-width: 100%;
           height: auto;
           -webkit-box-shadow: 0 0 8px #201f1f;
-                  box-shadow: 0 0 8px #201f1f; }
+                  box-shadow: 0 0 8px #201f1f;
+          border-radius: 5px; }
         .menu .inner-menu .menu-grid figure figcaption {
-          margin-top: 8px;
+          margin-top: 5px;
           width: 100%;
           display: -webkit-box;
           display: -ms-flexbox;
