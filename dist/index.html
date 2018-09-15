@@ -109,7 +109,17 @@
       </div>
     </section>
     <section class="contact" id="contact">
-
+      <div class="inner inner-contact rw-flex-spb">
+        <div class="side-ellipse">
+          <h3>Contact us</h3>
+        </div>
+        <form class="c-flex-center" id="contact-form">
+          <input type="text" placeholder="Enter your name">
+          <input type="email" placeholder="Enter your email address">
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+          <a type="submit" class="btn btn-green">Send</a>
+        </form>
+      </div>
     </section>
     <footer id="footer">
       <div class="inner inner-footer">
@@ -122,9 +132,9 @@
         </div>
         <div class="column newsletter">
           <h4>Newletter</h4>
-          <form>
+          <form id="newsletter-form">
             <input type="text" placeholder="Enter your email address">
-            <a href="" class="btn btn-green">Send</a>
+            <a type="submit" class="btn btn-green">Send</a>
           </form>
         </div>
         <div class="column app">
@@ -136,6 +146,7 @@
         </div>
       </div>
     </footer>
-  </div> 
+  </div>
+  <script src="js/main.js"></script> 
 </body>
 </html>

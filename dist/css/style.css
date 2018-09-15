@@ -17,6 +17,9 @@ body {
   max-width: 1200px;
   margin: auto; }
 
+a[type=submit] {
+  cursor: pointer; }
+
 .inner {
   max-width: 900px;
   margin: auto;
@@ -324,6 +327,30 @@ header {
     .testimonies .testimony span {
       font-style: italic; }
 
+.contact {
+  background-color: #f4f4f4;
+  color: rgba(0, 0, 0, 0.9); }
+  .contact .inner-contact {
+    min-height: 300px;
+    padding: 30px 0; }
+  .contact form {
+    width: 70%; }
+    .contact form input, .contact form textarea {
+      border-radius: 5px;
+      border: none;
+      padding: 10px 15px;
+      margin-bottom: 15px; }
+
+@media (max-width: 768px) {
+  .contact .inner-contact {
+    padding: 30px; }
+  .contact form {
+    width: 100%; } }
+
+@media (max-width: 369px) {
+  .contact .inner-contact {
+    padding: 15px; } }
+
 footer {
   height: auto;
   background-color: rgba(0, 0, 0, 0.9);
@@ -365,11 +392,11 @@ footer {
             align-items: center; }
   footer .newsletter input {
     padding: 10px 15px;
-    width: 70%;
+    width: 80%;
     border-radius: 5px 0 0 5px;
     border: none; }
   footer .newsletter a.btn {
-    width: 18%;
+    width: 20%;
     border-radius: 0 5px 5px 0; }
   footer .app img {
     height: 32px;
