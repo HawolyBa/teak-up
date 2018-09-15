@@ -7,6 +7,9 @@
 a, a:hover {
   text-decoration: none; }
 
+ul, li {
+  list-style: none; }
+
 body {
   background: rgba(0, 0, 0, 0.9); }
 
@@ -44,11 +47,26 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row npwrap;
-          flex-flow: row npwrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.rn-flex-fs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
@@ -104,13 +122,46 @@ a.btn {
 
 header {
   background-color: rgba(0, 0, 0, 0.9);
-  height: 50px;
+  min-height: 50px;
   line-height: 50px;
   color: #f4f4f4; }
   header h1 {
     margin-left: 30px;
     font-family: 'Kaushan Script', cursive;
     font-size: 30px; }
+  header nav {
+    margin-right: 30px; }
+    header nav ul li {
+      margin-right: 10px; }
+      header nav ul li:last-child {
+        margin-right: 0; }
+      header nav ul li a {
+        padding: 0 10px;
+        color: #f4f4f4;
+        border-right: 1px solid #212121;
+        -webkit-transition: all 1s;
+        transition: all 1s; }
+        header nav ul li a:hover {
+          background-color: #01c476; }
+
+@media (max-width: 768px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    header h1, header nav {
+      width: 100%;
+      text-align: center; }
+    header nav {
+      margin-right: 0; }
+      header nav ul.rn-flex-fs {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+
+@media (max-width: 420px) {
+  header nav ul li a {
+    font-size: 0.6rem; } }
 
 .hero::after {
   content: '';
