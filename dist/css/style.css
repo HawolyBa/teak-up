@@ -129,8 +129,10 @@ header {
           filter: blur(0); }
 
 .about {
-  height: 300px;
-  color: #f4f4f4; }
+  color: #f4f4f4;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .about .inner-about {
+    height: 300px; }
   .about .about-text {
     width: 70%; }
     .about .about-text h3 {
