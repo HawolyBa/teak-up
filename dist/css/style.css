@@ -166,29 +166,30 @@ header {
   header nav ul li a {
     font-size: 0.6rem; } }
 
-.hero::after {
-  content: '';
-  width: 100%;
-  height: 450px;
-  background-image: url(../images/photo-1494314671902-399b18174975.png);
-  background-size: cover;
-  background-position: center;
-  display: block;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transition: all 1s;
-  transition: all 1s; }
-
-.hero .hero-content {
-  color: #f4f4f4;
-  text-align: center;
-  position: absolute;
-  height: 300px;
-  z-index: 1;
-  left: 50%;
-  top: 45%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+.hero {
+  position: relative; }
+  .hero::after {
+    content: '';
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/photo-1494314671902-399b18174975.png);
+    background-size: cover;
+    background-position: center;
+    display: block;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transition: all 1s;
+    transition: all 1s; }
+  .hero .hero-content {
+    color: #f4f4f4;
+    text-align: center;
+    position: absolute;
+    height: 300px;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%); }
 
 .hero:hover::after {
   -webkit-filter: blur(0);
@@ -304,13 +305,15 @@ header {
   background-position: center; }
   .testimonies .inner-testimonies {
     height: 350px; }
+  .testimonies .side-ellipse {
+    top: 20%; }
   .testimonies .testimony {
     width: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     color: white;
     text-shadow: 0 0 5px black;
     text-align: center;
